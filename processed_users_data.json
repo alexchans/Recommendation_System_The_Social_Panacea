@@ -1,0 +1,226 @@
+{
+    "uid1": {
+        "age": 0.22,
+        "avatar": "",
+        "bio": "Love hiking and outdoor adventures!",
+        "birthday": "05/14/2001",
+        "cookingWithFriends": 0,
+        "eatingWithFriends": 1,
+        "email": "jessica.williams@harvard.edu",
+        "enneagramType": 0.49186766147613525,
+        "foodPreferences": 0.3,
+        "fullName": "Jessica Williams",
+        "isAdmin": false,
+        "isPremium": false,
+        "meetingNewPeopleComfortLevel": 0.8,
+        "numReported": 0,
+        "personalityType": 0.4928501546382904,
+        "pickUpGamesPreferences": 0.2,
+        "popCultureFriendPreferences": 0.25,
+        "popCulturePreferences": 0.25,
+        "popCultureSubPreferences": {
+            "Arts and Crafts": [
+                "Embroidery",
+                "Knitting"
+            ],
+            "Music": [
+                "Pop",
+                "Indie/Alternative"
+            ]
+        },
+        "profilePic": "",
+        "sportsPreferences": 0.2,
+        "sportsTeams": {
+            "Soccer": [
+                "FC Barcelona"
+            ],
+            "Tennis": [
+                "Serena Williams"
+            ]
+        },
+        "travelLocationPreferences": [
+            "Spain",
+            "Costa Rica"
+        ],
+        "travelWithFriends": 1,
+        "uid": "uid1",
+        "university": 0.5051431059837341
+    },
+    "uid2": {
+        "age": 0.2,
+        "avatar": "",
+        "bio": "Bookworm and coffee enthusiast.",
+        "birthday": "09/30/2003",
+        "cookingWithFriends": 0,
+        "eatingWithFriends": 0,
+        "email": "michael.smith@ucla.edu",
+        "enneagramType": 0.6110783815383911,
+        "foodPreferences": 0.2,
+        "fullName": "Michael Smith",
+        "isAdmin": false,
+        "isPremium": false,
+        "meetingNewPeopleComfortLevel": 0.4,
+        "numReported": 0,
+        "personalityType": 0.5068572163581848,
+        "pickUpGamesPreferences": 0.1,
+        "popCultureFriendPreferences": 0.25,
+        "popCulturePreferences": 0.375,
+        "popCultureSubPreferences": {
+            "Books": [
+                "Science Fiction",
+                "Fantasy"
+            ],
+            "Technology": [
+                "Coding and Programming",
+                "Emerging Technologies"
+            ],
+            "Video Games": [
+                "Indie Games",
+                "Role-Playing Games (RPG)"
+            ]
+        },
+        "profilePic": "",
+        "sportsPreferences": 0.1,
+        "travelLocationPreferences": [
+            "Japan",
+            "Germany"
+        ],
+        "travelWithFriends": 0,
+        "uid": "uid2",
+        "university": 0.3352195620536804
+    },
+    "uid3": {
+        "age": 0.24,
+        "avatar": "",
+        "bio": "Avid traveler and foodie.",
+        "birthday": "03/08/1999",
+        "cookingWithFriends": 1,
+        "eatingWithFriends": 1,
+        "email": "samantha.jones@nyu.edu",
+        "enneagramType": 0.4309547543525696,
+        "foodPreferences": 0.3,
+        "fullName": "Samantha Jones",
+        "isAdmin": false,
+        "isPremium": false,
+        "meetingNewPeopleComfortLevel": 1.0,
+        "numReported": 0,
+        "personalityType": 0.5104067921638489,
+        "pickUpGamesPreferences": 0.1,
+        "popCultureFriendPreferences": 0.25,
+        "popCulturePreferences": 0.25,
+        "popCultureSubPreferences": {
+            "Movies": [
+                "Romantic Comedy",
+                "Drama"
+            ],
+            "Music": [
+                "Pop",
+                "Electronic/Dance"
+            ]
+        },
+        "profilePic": "",
+        "sportsPreferences": 0.1,
+        "travelLocationPreferences": [
+            "France",
+            "Italy",
+            "Spain"
+        ],
+        "travelWithFriends": 1,
+        "uid": "uid3",
+        "university": 0.3994572162628174
+    },
+    "uid4": {
+        "age": 0.25,
+        "avatar": "",
+        "bio": "Tech geek and gamer.",
+        "birthday": "11/22/1997",
+        "cookingWithFriends": 0,
+        "eatingWithFriends": 0,
+        "email": "alex.lee@mit.edu",
+        "enneagramType": 0.44284558296203613,
+        "foodPreferences": 0.2,
+        "fullName": "Alex Lee",
+        "isAdmin": false,
+        "isPremium": false,
+        "meetingNewPeopleComfortLevel": 0.6,
+        "numReported": 0,
+        "personalityType": 0.4413437247276306,
+        "pickUpGamesPreferences": 0.1,
+        "popCultureFriendPreferences": 0.125,
+        "popCulturePreferences": 0.25,
+        "popCultureSubPreferences": {
+            "Technology": [
+                "Gadget Reviews and Unboxings",
+                "Gaming Hardware and Accessories"
+            ],
+            "Video Games": [
+                "First-Person Shooter",
+                "Strategy Games"
+            ]
+        },
+        "profilePic": "",
+        "sportsPreferences": 0.1,
+        "sportsTeams": {
+            "Esports": [
+                "Team Liquid",
+                "Cloud9"
+            ]
+        },
+        "travelLocationPreferences": [
+            "South Korea",
+            "Japan"
+        ],
+        "travelWithFriends": 0,
+        "uid": "uid4",
+        "university": 0.39120668172836304
+    },
+    "uid5": {
+        "age": 0.23,
+        "avatar": "",
+        "bio": "Fitness enthusiast and sports fan.",
+        "birthday": "07/18/2000",
+        "cookingWithFriends": 1,
+        "eatingWithFriends": 1,
+        "email": "david.johnson@utexas.edu",
+        "enneagramType": 0,
+        "foodPreferences": 0.3,
+        "fullName": "David Johnson",
+        "isAdmin": false,
+        "isPremium": false,
+        "meetingNewPeopleComfortLevel": 0.8,
+        "numReported": 0,
+        "personalityType": 0,
+        "pickUpGamesPreferences": 0.3,
+        "popCultureFriendPreferences": 0.125,
+        "popCulturePreferences": 0.125,
+        "popCultureSubPreferences": {
+            "Sports": [
+                "Football",
+                "Basketball"
+            ]
+        },
+        "profilePic": "",
+        "sportsPreferences": 0.3,
+        "sportsTeams": {
+            "Baseball": [
+                "Houston Astros",
+                "University of Texas"
+            ],
+            "Basketball": [
+                "San Antonio Spurs",
+                "University of Texas"
+            ],
+            "Football": [
+                "Dallas Cowboys",
+                "University of Texas"
+            ]
+        },
+        "travelLocationPreferences": [
+            "United States",
+            "Mexico"
+        ],
+        "travelWithFriends": 1,
+        "uid": "uid5",
+        "university": 0.37487199902534485
+    }
+}
