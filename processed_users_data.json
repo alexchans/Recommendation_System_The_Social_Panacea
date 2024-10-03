@@ -1,23 +1,23 @@
 {
     "uid1": {
-        "age": 0.22,
+        "age": 0.022000000000000002,
         "avatar": "",
         "bio": "Love hiking and outdoor adventures!",
         "birthday": "05/14/2001",
-        "cookingWithFriends": 0,
-        "eatingWithFriends": 1,
+        "cookingWithFriends": 0.0,
+        "eatingWithFriends": 0.06,
         "email": "jessica.williams@harvard.edu",
-        "enneagramType": 0.49186766147613525,
-        "foodPreferences": 0.3,
+        "enneagramType": 0.03934941291809082,
+        "foodPreferences": 0.016666666666666666,
         "fullName": "Jessica Williams",
         "isAdmin": false,
         "isPremium": false,
-        "meetingNewPeopleComfortLevel": 0.8,
+        "meetingNewPeopleComfortLevel": 0.05600000000000001,
         "numReported": 0,
-        "personalityType": 0.4928501546382904,
-        "pickUpGamesPreferences": 0.2,
-        "popCultureFriendPreferences": 0.25,
-        "popCulturePreferences": 0.25,
+        "personalityType": 0.06899902164936067,
+        "pickUpGamesPreferences": 0.011111111111111112,
+        "popCultureFriendPreferences": 0.014285714285714285,
+        "popCulturePreferences": 0.011428571428571429,
         "popCultureSubPreferences": {
             "Arts and Crafts": [
                 "Embroidery",
@@ -29,7 +29,7 @@
             ]
         },
         "profilePic": "",
-        "sportsPreferences": 0.2,
+        "sportsPreferences": 0.014545454545454545,
         "sportsTeams": {
             "Soccer": [
                 "FC Barcelona"
@@ -42,29 +42,29 @@
             "Spain",
             "Costa Rica"
         ],
-        "travelWithFriends": 1,
+        "travelWithFriends": 0.07,
         "uid": "uid1",
-        "university": 0.5051431059837341
+        "university": 0.07577146589756012
     },
     "uid2": {
-        "age": 0.2,
+        "age": 0.020000000000000004,
         "avatar": "",
         "bio": "Bookworm and coffee enthusiast.",
         "birthday": "09/30/2003",
-        "cookingWithFriends": 0,
-        "eatingWithFriends": 0,
+        "cookingWithFriends": 0.0,
+        "eatingWithFriends": 0.0,
         "email": "michael.smith@ucla.edu",
-        "enneagramType": 0.6110783815383911,
-        "foodPreferences": 0.2,
+        "enneagramType": 0.04888627052307129,
+        "foodPreferences": 0.011111111111111112,
         "fullName": "Michael Smith",
         "isAdmin": false,
         "isPremium": false,
-        "meetingNewPeopleComfortLevel": 0.4,
+        "meetingNewPeopleComfortLevel": 0.028000000000000004,
         "numReported": 0,
-        "personalityType": 0.5068572163581848,
-        "pickUpGamesPreferences": 0.1,
-        "popCultureFriendPreferences": 0.25,
-        "popCulturePreferences": 0.375,
+        "personalityType": 0.07096001029014588,
+        "pickUpGamesPreferences": 0.005555555555555556,
+        "popCultureFriendPreferences": 0.014285714285714285,
+        "popCulturePreferences": 0.017142857142857144,
         "popCultureSubPreferences": {
             "Books": [
                 "Science Fiction",
@@ -80,34 +80,34 @@
             ]
         },
         "profilePic": "",
-        "sportsPreferences": 0.1,
+        "sportsPreferences": 0.007272727272727273,
         "travelLocationPreferences": [
             "Japan",
             "Germany"
         ],
-        "travelWithFriends": 0,
+        "travelWithFriends": 0.0,
         "uid": "uid2",
-        "university": 0.3352195620536804
+        "university": 0.050282934308052064
     },
     "uid3": {
-        "age": 0.24,
+        "age": 0.024,
         "avatar": "",
         "bio": "Avid traveler and foodie.",
         "birthday": "03/08/1999",
-        "cookingWithFriends": 1,
-        "eatingWithFriends": 1,
+        "cookingWithFriends": 0.06,
+        "eatingWithFriends": 0.06,
         "email": "samantha.jones@nyu.edu",
-        "enneagramType": 0.4309547543525696,
-        "foodPreferences": 0.3,
+        "enneagramType": 0.03447638034820557,
+        "foodPreferences": 0.016666666666666666,
         "fullName": "Samantha Jones",
         "isAdmin": false,
         "isPremium": false,
-        "meetingNewPeopleComfortLevel": 1.0,
+        "meetingNewPeopleComfortLevel": 0.07,
         "numReported": 0,
-        "personalityType": 0.5104067921638489,
-        "pickUpGamesPreferences": 0.1,
-        "popCultureFriendPreferences": 0.25,
-        "popCulturePreferences": 0.25,
+        "personalityType": 0.07145695090293885,
+        "pickUpGamesPreferences": 0.005555555555555556,
+        "popCultureFriendPreferences": 0.014285714285714285,
+        "popCulturePreferences": 0.011428571428571429,
         "popCultureSubPreferences": {
             "Movies": [
                 "Romantic Comedy",
@@ -119,35 +119,35 @@
             ]
         },
         "profilePic": "",
-        "sportsPreferences": 0.1,
+        "sportsPreferences": 0.007272727272727273,
         "travelLocationPreferences": [
             "France",
             "Italy",
             "Spain"
         ],
-        "travelWithFriends": 1,
+        "travelWithFriends": 0.07,
         "uid": "uid3",
-        "university": 0.3994572162628174
+        "university": 0.05991858243942261
     },
     "uid4": {
-        "age": 0.25,
+        "age": 0.025,
         "avatar": "",
         "bio": "Tech geek and gamer.",
         "birthday": "11/22/1997",
-        "cookingWithFriends": 0,
-        "eatingWithFriends": 0,
+        "cookingWithFriends": 0.0,
+        "eatingWithFriends": 0.0,
         "email": "alex.lee@mit.edu",
-        "enneagramType": 0.44284558296203613,
-        "foodPreferences": 0.2,
+        "enneagramType": 0.03542764663696289,
+        "foodPreferences": 0.011111111111111112,
         "fullName": "Alex Lee",
         "isAdmin": false,
         "isPremium": false,
-        "meetingNewPeopleComfortLevel": 0.6,
+        "meetingNewPeopleComfortLevel": 0.042,
         "numReported": 0,
-        "personalityType": 0.4413437247276306,
-        "pickUpGamesPreferences": 0.1,
-        "popCultureFriendPreferences": 0.125,
-        "popCulturePreferences": 0.25,
+        "personalityType": 0.061788121461868295,
+        "pickUpGamesPreferences": 0.005555555555555556,
+        "popCultureFriendPreferences": 0.007142857142857143,
+        "popCulturePreferences": 0.011428571428571429,
         "popCultureSubPreferences": {
             "Technology": [
                 "Gadget Reviews and Unboxings",
@@ -159,7 +159,7 @@
             ]
         },
         "profilePic": "",
-        "sportsPreferences": 0.1,
+        "sportsPreferences": 0.007272727272727273,
         "sportsTeams": {
             "Esports": [
                 "Team Liquid",
@@ -170,29 +170,29 @@
             "South Korea",
             "Japan"
         ],
-        "travelWithFriends": 0,
+        "travelWithFriends": 0.0,
         "uid": "uid4",
-        "university": 0.39120668172836304
+        "university": 0.058681002259254454
     },
     "uid5": {
-        "age": 0.23,
+        "age": 0.023000000000000003,
         "avatar": "",
         "bio": "Fitness enthusiast and sports fan.",
         "birthday": "07/18/2000",
-        "cookingWithFriends": 1,
-        "eatingWithFriends": 1,
+        "cookingWithFriends": 0.06,
+        "eatingWithFriends": 0.06,
         "email": "david.johnson@utexas.edu",
         "enneagramType": 0,
-        "foodPreferences": 0.3,
+        "foodPreferences": 0.016666666666666666,
         "fullName": "David Johnson",
         "isAdmin": false,
         "isPremium": false,
-        "meetingNewPeopleComfortLevel": 0.8,
+        "meetingNewPeopleComfortLevel": 0.05600000000000001,
         "numReported": 0,
         "personalityType": 0,
-        "pickUpGamesPreferences": 0.3,
-        "popCultureFriendPreferences": 0.125,
-        "popCulturePreferences": 0.125,
+        "pickUpGamesPreferences": 0.016666666666666666,
+        "popCultureFriendPreferences": 0.007142857142857143,
+        "popCulturePreferences": 0.005714285714285714,
         "popCultureSubPreferences": {
             "Sports": [
                 "Football",
@@ -200,7 +200,7 @@
             ]
         },
         "profilePic": "",
-        "sportsPreferences": 0.3,
+        "sportsPreferences": 0.021818181818181816,
         "sportsTeams": {
             "Baseball": [
                 "Houston Astros",
@@ -219,8 +219,8 @@
             "United States",
             "Mexico"
         ],
-        "travelWithFriends": 1,
+        "travelWithFriends": 0.07,
         "uid": "uid5",
-        "university": 0.37487199902534485
+        "university": 0.05623079985380173
     }
 }

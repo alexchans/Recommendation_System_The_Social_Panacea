@@ -48,22 +48,39 @@ def mbti_to_fullwords(personality_type):
 def extract_last_word(enneagram_type):
     if isinstance(enneagram_type, str) and enneagram_type.strip() != '':
         return enneagram_type.split()[-1]
-# preprocess data
+    
+# Weights in percentage (as decimal)
+weights = {
+    'age': 0.10,
+    'university': 0.15,
+    'sportsPreferences': 0.08,
+    'pickUpGamesPreferences': 0.05,
+    'foodPreferences': 0.05,
+    'eatingWithFriends': 0.06,
+    'cookingWithFriends': 0.06,
+    'popCulturePreferences': 0.04,
+    'popCultureFriendPreferences': 0.05,
+    'travelWithFriends': 0.07,
+    'personalityType': 0.14,
+    'enneagramType': 0.08,
+    'meetingNewPeopleComfortLevel': 0.07
+}
+
+# Preprocess data and apply weights
 for user, user_info in data.items():
-    print(extract_last_word(user_info['enneagramType']))
-    user_info['age'] /= 100
-    user_info['university'] = word_embedding_normalization(user_info['university'])
-    user_info['sportsPreferences'] = len(user_info['sportsPreferences']) / 10
-    user_info['pickUpGamesPreferences'] = len(user_info['pickUpGamesPreferences']) / 10
-    user_info['foodPreferences'] = len(user_info['foodPreferences']) / 10
-    user_info['eatingWithFriends'] = 1 if user_info['eatingWithFriends'] else 0
-    user_info['cookingWithFriends'] = 1 if user_info['cookingWithFriends'] else 0
-    user_info['popCulturePreferences'] = len(user_info['popCulturePreferences']) / 8
-    user_info['popCultureFriendPreferences'] = len(user_info['popCultureFriendPreferences']) / 8
-    user_info['travelWithFriends'] = 1 if user_info['travelWithFriends'] else 0
-    user_info['personalityType'] = word_embedding_normalization(mbti_to_fullwords(user_info['personalityType'])) if user_info['personalityType'] != '' else 0
-    user_info['enneagramType'] = word_embedding_normalization(extract_last_word(user_info['enneagramType'])) if user_info['enneagramType'] != '' else 0
-    user_info['meetingNewPeopleComfortLevel'] /= 5
+    user_info['age'] = (user_info['age'] / 100) * weights['age']
+    user_info['university'] = word_embedding_normalization(user_info['university']) * weights['university']
+    user_info['sportsPreferences'] = (len(user_info['sportsPreferences']) / 11) * weights['sportsPreferences']
+    user_info['pickUpGamesPreferences'] = (len(user_info['pickUpGamesPreferences']) / 9) * weights['pickUpGamesPreferences']
+    user_info['foodPreferences'] = (len(user_info['foodPreferences']) / 9) * weights['foodPreferences']
+    user_info['eatingWithFriends'] = (1 if user_info['eatingWithFriends'] else 0) * weights['eatingWithFriends']
+    user_info['cookingWithFriends'] = (1 if user_info['cookingWithFriends'] else 0) * weights['cookingWithFriends']
+    user_info['popCulturePreferences'] = (len(user_info['popCulturePreferences']) / 7) * weights['popCulturePreferences']
+    user_info['popCultureFriendPreferences'] = (len(user_info['popCultureFriendPreferences']) / 7) * weights['popCultureFriendPreferences']
+    user_info['travelWithFriends'] = (1 if user_info['travelWithFriends'] else 0) * weights['travelWithFriends']
+    user_info['personalityType'] = word_embedding_normalization(mbti_to_fullwords(user_info['personalityType'])) * weights['personalityType'] if user_info['personalityType'] != '' else 0
+    user_info['enneagramType'] = word_embedding_normalization(extract_last_word(user_info['enneagramType'])) * weights['enneagramType'] if user_info['enneagramType'] != '' else 0
+    user_info['meetingNewPeopleComfortLevel'] = (user_info['meetingNewPeopleComfortLevel'] / 5) * weights['meetingNewPeopleComfortLevel']
 
 # helper function for saving data
 def convert_floats(data):
