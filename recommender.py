@@ -3,6 +3,7 @@ from firebase_admin import credentials, db
 import numpy as np
 from gensim.models import KeyedVectors
 import json
+from sklearn.metrics.pairwise import cosine_similarity
 
 # Initialize Firebase, store db to data
 cred = credentials.Certificate('key.json')
@@ -66,22 +67,40 @@ weights = {
     'meetingNewPeopleComfortLevel': 0.07
 }
 
+user_matrix = []  # Initialize the 2D matrix used for collaborative filtering
+
 # Preprocess data and apply weights
 for user, user_info in data.items():
+    current_user = []
+    # Preprocess and append each attribute to current_user
     user_info['age'] = (user_info['age'] / 100) * weights['age']
+    current_user.append(user_info['age'])
     user_info['university'] = word_embedding_normalization(user_info['university']) * weights['university']
+    current_user.append(user_info['university'])
     user_info['sportsPreferences'] = (len(user_info['sportsPreferences']) / 11) * weights['sportsPreferences']
+    current_user.append(user_info['sportsPreferences'])
     user_info['pickUpGamesPreferences'] = (len(user_info['pickUpGamesPreferences']) / 9) * weights['pickUpGamesPreferences']
+    current_user.append(user_info['pickUpGamesPreferences'])
     user_info['foodPreferences'] = (len(user_info['foodPreferences']) / 9) * weights['foodPreferences']
+    current_user.append(user_info['foodPreferences'])
     user_info['eatingWithFriends'] = (1 if user_info['eatingWithFriends'] else 0) * weights['eatingWithFriends']
+    current_user.append(user_info['eatingWithFriends'])
     user_info['cookingWithFriends'] = (1 if user_info['cookingWithFriends'] else 0) * weights['cookingWithFriends']
+    current_user.append(user_info['cookingWithFriends'])
     user_info['popCulturePreferences'] = (len(user_info['popCulturePreferences']) / 7) * weights['popCulturePreferences']
+    current_user.append(user_info['popCulturePreferences'])
     user_info['popCultureFriendPreferences'] = (len(user_info['popCultureFriendPreferences']) / 7) * weights['popCultureFriendPreferences']
+    current_user.append(user_info['popCultureFriendPreferences'])
     user_info['travelWithFriends'] = (1 if user_info['travelWithFriends'] else 0) * weights['travelWithFriends']
+    current_user.append(user_info['travelWithFriends'])
     user_info['personalityType'] = word_embedding_normalization(mbti_to_fullwords(user_info['personalityType'])) * weights['personalityType'] if user_info['personalityType'] != '' else 0
+    current_user.append(user_info['personalityType'])
     user_info['enneagramType'] = word_embedding_normalization(extract_last_word(user_info['enneagramType'])) * weights['enneagramType'] if user_info['enneagramType'] != '' else 0
+    current_user.append(user_info['enneagramType'])
     user_info['meetingNewPeopleComfortLevel'] = (user_info['meetingNewPeopleComfortLevel'] / 5) * weights['meetingNewPeopleComfortLevel']
-
+    current_user.append(user_info['meetingNewPeopleComfortLevel'])
+    # Append the current_user row to the matrix
+    user_matrix.append(current_user)
 # helper function for saving data
 def convert_floats(data):
     if isinstance(data, dict):
@@ -95,5 +114,11 @@ def convert_floats(data):
 data = convert_floats(data)
 # Save data as a JSON file
 with open('processed_users_data.json', 'w') as json_file:
-    json.dump(data, json_file, indent=4)  # Use indent for pretty printing
+    json.dump(data, json_file, indent=4)  
 print("Data has been saved as processed_users_data.json.")
+
+# Collborative Filtering Starts
+# Compute cosine similarity between users
+similarities = cosine_similarity(user_matrix)
+print(similarities)
+
