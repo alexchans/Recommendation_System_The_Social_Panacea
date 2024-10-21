@@ -99,8 +99,7 @@ for user, user_info in data.items():
     current_user.append(user_info['enneagramType'])
     user_info['meetingNewPeopleComfortLevel'] = (user_info['meetingNewPeopleComfortLevel'] / 5) * weights['meetingNewPeopleComfortLevel']
     current_user.append(user_info['meetingNewPeopleComfortLevel'])
-    # Append the current_user row to the matrix
-    user_matrix.append(current_user)
+    user_matrix.append(current_user)  # Append the current_user row to the matrix
 
 # Collborative Filtering Starts
 # Compute cosine similarity between users
