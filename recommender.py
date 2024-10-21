@@ -101,24 +101,28 @@ for user, user_info in data.items():
     current_user.append(user_info['meetingNewPeopleComfortLevel'])
     # Append the current_user row to the matrix
     user_matrix.append(current_user)
-# helper function for saving data
-def convert_floats(data):
-    if isinstance(data, dict):
-        return {k: convert_floats(v) for k, v in data.items()}
-    elif isinstance(data, list):
-        return [convert_floats(i) for i in data]
-    elif isinstance(data, np.float32):  # Check for float32 type
-        return float(data)  # Convert to Python float
-    return data
-
-data = convert_floats(data)
-# Save data as a JSON file
-with open('processed_users_data.json', 'w') as json_file:
-    json.dump(data, json_file, indent=4)  
-print("Data has been saved as processed_users_data.json.")
 
 # Collborative Filtering Starts
 # Compute cosine similarity between users
 similarities = cosine_similarity(user_matrix)
-print(similarities)
+
+# Convert the similarity matrix into the required JSON format
+user_ids = list(data.keys())  
+similarity_dict = {}
+
+for i, user_id in enumerate(user_ids):
+    other_users = {}
+    for j, similarity in enumerate(similarities[i]):
+        if i != j:  # Exclude the user itself
+            other_users[user_ids[j]] = similarity
+    # Sort the map by similarity score in descending order
+    sorted_other_users = dict(sorted(other_users.items(), key=lambda item: item[1], reverse=True))
+    similarity_dict[user_id] = sorted_other_users
+
+# Save the similarity dictionary to a JSON file
+with open('user_similarities.json', 'w') as json_file:
+    json.dump(similarity_dict, json_file, indent=4)
+print("Similarities saved to user_similarities.json")
+
+
 
