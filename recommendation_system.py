@@ -69,27 +69,26 @@ weights = {
 
 user_matrix = []  # Initialize the 2D matrix used for collaborative filtering
 
-# Preprocess data and apply weights
+# Proprecess input data into category data between 0 and 1, and add to the matrix
 for user, user_info in data.items():
     current_user = []
-    # Preprocess and append each attribute to current_user
     user_info['age'] = (user_info['age'] / 100) * weights['age']
     current_user.append(user_info['age'])
     user_info['university'] = word_embedding_normalization(user_info['university']) * weights['university']
     current_user.append(user_info['university'])
-    user_info['sportsPreferences'] = (len(user_info['sportsPreferences']) / 11) * weights['sportsPreferences']
+    user_info['sportsPreferences'] = 0 if user_info['sportsPreferences'] == "N/A" else (len(user_info['sportsPreferences']) / 3) * weights['sportsPreferences']
     current_user.append(user_info['sportsPreferences'])
-    user_info['pickUpGamesPreferences'] = (len(user_info['pickUpGamesPreferences']) / 9) * weights['pickUpGamesPreferences']
+    user_info['pickUpGamesPreferences'] = 0 if user_info['pickUpGamesPreferences'] == "N/A" else (len(user_info['pickUpGamesPreferences']) / 3) * weights['pickUpGamesPreferences']
     current_user.append(user_info['pickUpGamesPreferences'])
-    user_info['foodPreferences'] = (len(user_info['foodPreferences']) / 9) * weights['foodPreferences']
+    user_info['foodPreferences'] = 0 if user_info['foodPreferences'] == "N/A" else (len(user_info['foodPreferences']) / 3) * weights['foodPreferences']
     current_user.append(user_info['foodPreferences'])
     user_info['eatingWithFriends'] = (1 if user_info['eatingWithFriends'] else 0) * weights['eatingWithFriends']
     current_user.append(user_info['eatingWithFriends'])
     user_info['cookingWithFriends'] = (1 if user_info['cookingWithFriends'] else 0) * weights['cookingWithFriends']
     current_user.append(user_info['cookingWithFriends'])
-    user_info['popCulturePreferences'] = (len(user_info['popCulturePreferences']) / 7) * weights['popCulturePreferences']
+    user_info['popCulturePreferences'] = 0 if user_info['popCulturePreferences'] == "N/A" else (len(user_info['popCulturePreferences']) / 3) * weights['popCulturePreferences']
     current_user.append(user_info['popCulturePreferences'])
-    user_info['popCultureFriendPreferences'] = (len(user_info['popCultureFriendPreferences']) / 7) * weights['popCultureFriendPreferences']
+    user_info['popCultureFriendPreferences'] = 0 if user_info['popCultureFriendPreferences'] == "N/A" else (len(user_info['popCultureFriendPreferences']) / 3) * weights['popCultureFriendPreferences']
     current_user.append(user_info['popCultureFriendPreferences'])
     user_info['travelWithFriends'] = (1 if user_info['travelWithFriends'] else 0) * weights['travelWithFriends']
     current_user.append(user_info['travelWithFriends'])
@@ -99,6 +98,7 @@ for user, user_info in data.items():
     current_user.append(user_info['enneagramType'])
     user_info['meetingNewPeopleComfortLevel'] = (user_info['meetingNewPeopleComfortLevel'] / 5) * weights['meetingNewPeopleComfortLevel']
     current_user.append(user_info['meetingNewPeopleComfortLevel'])
+    
     user_matrix.append(current_user)  # Append the current_user row to the matrix
 
 # Collborative Filtering Starts
