@@ -13,7 +13,7 @@ git clone https://github.com/alexchans/Recommendation_System_The_Social_Panacea.
 ### 2. Install required dependencies
 
 ```bash
-pip install firebase-admin gensim numpy scikit-learn
+pip install -r requirements.txt
 ```
 
 ### 3. Download required files
@@ -122,3 +122,15 @@ Example structure of the output:
 
 - The script is flexible and can be easily modified to accommodate additional user attributes or adjust the weights used in similarity calculations.
 - The data preprocessing approach can be adjusted depending on the type of attribute being processed.
+
+---
+
+# Running the Server
+
+For instructions on how to run, test, and deploy the server hosting this recommendation system, refer to the [Server.md](./Server.md) file.
+
+The `Server.md` file includes:
+
+- Detailed steps to start the FastAPI server locally.
+- Guidance on testing endpoints.
+- Deployment instructions for platforms like Heroku.
